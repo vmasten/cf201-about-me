@@ -1,4 +1,4 @@
-"use strict";
+/* "use strict";
 
 var howTall, bornInWA, hateRain, seahawksFan, seattleResidence;
 
