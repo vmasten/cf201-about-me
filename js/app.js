@@ -1,9 +1,9 @@
-/* "use strict";
+"use strict";
 
 var howTall, bornInWA, hateRain, seahawksFan, seattleResidence;
 
- howTall = prompt('How tall am I (in inches)?');
- console.log('howTall', howTall);
+howTall = prompt('How tall am I (in inches)?');
+console.log('howTall', howTall);
 if (howTall < 76) {
   alert('I am not that short.');
 } else if (howTall === '76') {
