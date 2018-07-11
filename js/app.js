@@ -1,6 +1,6 @@
 'use strict';
 
-var userName, howTall, bornInWA, hateRain, seahawksFan, seattleResidence, onlyChild, favoriteFoodAndDrink = ['pizza', 'coffee', 'beer', 'steak', 'mac and cheese', 'fish and chips'], guesses = 3;
+var userName, howTall, bornInWA, hateRain, seahawksFan, seattleResidence, onlyChild, favoriteFoodAndDrink = ['pizza', 'coffee', 'beer', 'steak', 'mac and cheese'], guesses = 3;
 
 // userName = prompt('Hi, my name is Vince. What\'s yours?');
 // console.log('userName', userName);
@@ -96,28 +96,84 @@ var userName, howTall, bornInWA, hateRain, seahawksFan, seattleResidence, onlyCh
 
 // alert('Thanks for playing my guessing game, ' + userName + '!');
 
-// var answers = 'My favorite foods and drinks are: ';
+//var answers = 'My favorite foods and drinks are: ';
 
 var faves = prompt('What\'s one of my favorite foods?').toLowerCase();
 
-for (var j = 0; j < favoriteFoodAndDrink.length; j++) {
-  if (faves === favoriteFoodAndDrink[j]) {
-    alert('Correct!');
+for (var j = 0; j < 6; j++) {
+  for (var k = 0; k < favoriteFoodAndDrink.length; k++) {
+    if (faves === favoriteFoodAndDrink[k]) {
+      if (favoriteFoodAndDrink[k] === 'pizza') {
+        alert('Yes! If the question is pizza, the answer is yes.');
+        break;
+      }
+      else if (favoriteFoodAndDrink[k] === 'coffee') {
+        alert('YES. Black coffee is a way of life.');
+        break;
+      }
+      else if (favoriteFoodAndDrink[k] === 'beer') {
+        alert('Yep. Some of my friends refer to me as a beer snob, but I prefer the term enthusiast.');
+        break;
+      }
+      else if (favoriteFoodAndDrink[k] === 'steak') {
+        alert('Absolutely. Medium rare, please!');
+        break;
+      }
+      else if (favoriteFoodAndDrink[k] === 'mac and cheese') {
+        alert('Yeah, especially if it\'s spicy!');
+        break; 
+      }
+    }
+  }
+  if (faves === favoriteFoodAndDrink[k]) {
+    alert('Some other answers.');
+    break;
+  }
+  else {
+    alert('Try again!');
   }
 }
 
-// switch(favoriteFoodAndDrink) {
-// case 0:
-//   alert('Yes! If the question is pizza, the answer is yes.');
-//   alert(answers + favoriteFoodAndDrink[0]);
-//   break;
-// case favoriteFoodAndDrink[1]:
-//   alert('Yep. Some of my friends refer to me as a beer snob, but I prefer the term enthusiast.');
-//   break;
-// case 'coffee':
-//   alert('YES. Black coffee is a way of life.');
-//   break;
-// default:
-//   alert('Try again!');
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+//     switch(faves) {
+//     case 'pizza':
+//       alert('Yes! If the question is pizza, the answer is yes.');
+//       alert(answers + favoriteFoodAndDrink[0]);
+//       break;
+//     case 'coffee':
+//       alert('YES. Black coffee is a way of life.');
+//       break;
+//     case 'beer':
+//       alert('Yep. Some of my friends refer to me as a beer snob, but I prefer the term enthusiast.');
+//       break;
+//     case 'steak':
+//       alert('Absolutely. Medium rare, please!');
+//       break;
+//     case 'mac and cheese':
+//       alert('Yeah, especially if it\'s spicy!');
+//       break;
+//     }
+//   }
+//   else {
+//     alert('Try again!');
+//     break;
+//   }
 // }
-
