@@ -2,22 +2,36 @@
 
 var userName, howTall, bornInWA, hateRain, seahawksFan, seattleResidence, onlyChild;
 
-userName = prompt('Hi, my name is Vince. What\'s yours?');
-console.log('userName', userName);
+// userName = prompt('Hi, my name is Vince. What\'s yours?');
+// console.log('userName', userName);
 
-howTall = prompt('I have some questions for you, ' + userName + '. First, how tall am I (in inches)?');
+alert('I have some questions for you, ' + userName + '.');
+
+howTall = prompt('First, how tall am I (in inches)?');
 console.log('howTall', howTall);
-for (var i = 0; i < 4; i++) {
 
-  if (howTall < 76) {
-    alert('I am not that short.');
-  } else if (howTall === '76') {
-    alert('Correct!');
-    break;
-  } else {
-    alert('Whoa, I\'m not that tall!');
+if (howTall < 76) {
+  alert('I am not that short.');
+} else if (howTall === '76') {
+  alert('Correct!');
+} else {
+  alert('Whoa, I\'m not that tall!');
+}
+
+if (howTall !== '76') {
+  for (var i = 0; i < 3; i++) {
+    howTall = prompt('Try again!');
+    if (howTall < 76) {
+      alert('I am not that short.');
+    } else if (howTall === '76') {
+      alert('Correct!');
+      break;
+    } else {
+      alert('Whoa, I\'m not that tall!');
+    }
   }
 }
+
 // alert('The following questions require a response of y/n or yes/no.');
 
 // bornInWA = prompt('Was I born in Washington State?').toUpperCase();
