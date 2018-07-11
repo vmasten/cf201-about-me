@@ -1,36 +1,36 @@
 'use strict';
 
-var userName, howTall, bornInWA, hateRain, seahawksFan, seattleResidence, onlyChild;
+var userName, howTall, bornInWA, hateRain, seahawksFan, seattleResidence, onlyChild, favoriteFoodAndDrink = ['pizza', 'coffee', 'beer', 'steak', 'mac and cheese', 'fish and chips'], guesses = 3;
 
-// userName = prompt('Hi, my name is Vince. What\'s yours?');
-// console.log('userName', userName);
+// // userName = prompt('Hi, my name is Vince. What\'s yours?');
+// // console.log('userName', userName);
 
-alert('I have some questions for you, ' + userName + '.');
+// alert('I have some questions for you, ' + userName + '.');
 
-howTall = prompt('First, how tall am I (in inches)?');
-console.log('howTall', howTall);
+// howTall = prompt('First, how tall am I (in inches)?');
+// console.log('howTall', howTall);
 
-if (howTall < 76) {
-  alert('I am not that short.');
-} else if (howTall === '76') {
-  alert('Correct!');
-} else {
-  alert('Whoa, I\'m not that tall!');
-}
+// if (howTall < 76) {
+//   alert('I am not that short.');
+// } else if (howTall === '76') {
+//   alert('Correct!');
+// } else {
+//   alert('Whoa, I\'m not that tall!');
+// }
 
-if (howTall !== '76') {
-  for (var i = 0; i < 3; i++) {
-    howTall = prompt('Try again!');
-    if (howTall < 76) {
-      alert('I am not that short.');
-    } else if (howTall === '76') {
-      alert('Correct!');
-      break;
-    } else {
-      alert('Whoa, I\'m not that tall!');
-    }
-  }
-}
+// if (howTall !== '76') {
+//   for (var i = 0; i < guesses; i++) {
+//     howTall = prompt('Try again!');
+//     if (howTall < 76) {
+//       alert('I am not that short.');
+//     } else if (howTall === '76') {
+//       alert('Correct!');
+//       break;
+//     } else {
+//       alert('Whoa, I\'m not that tall!');
+//     }
+//   }
+// }
 
 // alert('The following questions require a response of y/n or yes/no.');
 
@@ -95,3 +95,22 @@ if (howTall !== '76') {
 // }
 
 // alert('Thanks for playing my guessing game, ' + userName + '!');
+
+var answers = 'My favorite foods and drinks are: ';
+var faves;
+
+switch(faves = prompt('What is one of my favorite foods or drinks?')) {
+case faves === favoriteFoodAndDrink[0]:
+  alert('Yes! If the question is pizza, the answer is yes.');
+  alert(answers + favoriteFoodAndDrink[0]);
+  break;
+case favoriteFoodAndDrink[1]:
+  alert('Yep. Some of my friends refer to me as a beer snob, but I prefer the term enthusiast.');
+  break;
+case 'coffee':
+  alert('YES. Black coffee is a way of life.');
+  break;
+default:
+  alert('Try again!');
+}
+
