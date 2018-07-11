@@ -1,9 +1,11 @@
 'use strict';
 
-var howTall, bornInWA, hateRain, seahawksFan, seattleResidence;
+var userName, howTall, bornInWA, hateRain, seahawksFan, seattleResidence;
 
-/*
-howTall = prompt('How tall am I (in inches)?');
+userName = prompt('Hi, my name is Vince. What\'s yours?');
+console.log('userName', userName);
+
+howTall = prompt('I have some questions for you, ' + userName + '. First, how tall am I (in inches)?');
 console.log('howTall', howTall);
 if (howTall < 76) {
   alert('I am not that short.');
@@ -50,7 +52,7 @@ else if (seahawksFan === 'N' || seahawksFan === 'NO') {
 else {
   alert('Please enter y/n or yes/no');
 }
-*/
+
 seattleResidence = prompt('Maybe I was born in state, but have I always lived in Seattle?').toUpperCase();
 console.log('seattleResidence', seattleResidence);
 if (seattleResidence === 'Y' || seattleResidence === 'YES') {
@@ -62,3 +64,4 @@ else if (seattleResidence === 'N' || seattleResidence === 'NO') {
 else {
   alert('Please enter y/n or yes/no');
 }
+alert('Thanks for playing my guessing game, ' + userName + '!');
