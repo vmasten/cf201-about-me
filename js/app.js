@@ -2,6 +2,10 @@
 
 var userName, howTall, bornInWA, hateRain, seahawksFan, seattleResidence, onlyChild, favoriteFoodAndDrink = ['pizza', 'coffee', 'beer', 'steak', 'mac and cheese'], inFavorites, heightGuesses = 3, foodGuesses = 6, correctGuesses = 0, foundFavorite = false;
 
+
+
+
+/*
 userName = prompt('Hi, my name is Vince. What\'s yours?');
 console.log('userName', userName);
 
@@ -9,6 +13,7 @@ alert('I have some questions for you, ' + userName + '. See how many you can get
 
 howTall = prompt('First, how tall am I (in inches)?');
 console.log('howTall', howTall);
+
 
 if (howTall < 76) {
   alert('I am not that short.');
@@ -36,21 +41,50 @@ if (howTall !== '76') {
   }
 }
 
+*/
+
 alert('The following questions require a response of y/n or yes/no.');
 
-bornInWA = prompt('Was I born in Washington State?').toUpperCase();
-console.log('bornInWA', bornInWA);
-if (bornInWA === 'Y' || bornInWA === 'YES') {
-  alert('That\'s right!');
-  correctGuesses++;
-  console.log('correctGuesses', correctGuesses);
+function born(correct) {
+  bornInWA = prompt('Was I born in Washington State?').toUpperCase();
+  console.log('bornInWA', correct);
+  if (bornInWA === 'Y' || bornInWA === 'YES') {
+    alert('That\'s right!');
+    correct++;
+    console.log('correctGuesses', correct);
+  }
+  else if (bornInWA === 'N' || bornInWA === 'NO') {
+    alert('Turns out I was born and raised here.');
+  }
+  else {
+    alert('Please enter y/n or yes/no.');
+  }
+  return correct;
 }
-else if (bornInWA === 'N' || bornInWA === 'NO') {
-  alert('Turns out I was born and raised here.');
-}
-else {
-  alert('Please enter y/n or yes/no.');
-}
+
+born(correctGuesses);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
 
 hateRain = prompt('Since I\'ve lived here all my life, does that mean I hate the rain?').toUpperCase();
 console.log('hateRain', hateRain);
@@ -163,3 +197,5 @@ if (foundFavorite === false) {
 }
 
 alert('Thanks for playing my guessing game, ' + userName + '! You got ' + correctGuesses + ' questions right!');
+
+*/
