@@ -1,2 +1,2 @@
-# cf201-lab2
-Code Fellows 201 Lab 2
+# cf201-labs
+Code Fellows 201 Labs
