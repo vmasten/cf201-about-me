@@ -24,4 +24,9 @@ p, li {
  padding-bottom: 0.5em;
 }
 
+ol {
+  margin-left: 20px;
+  list-style-type: decimal;
+}
+
 body {background-color: #f0f8ff};
