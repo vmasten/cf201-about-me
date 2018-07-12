@@ -1,11 +1,11 @@
 'use strict';
 
-var userName, howTall, bornInWA, hateRain, seahawksFan, seattleResidence, onlyChild, favoriteFoodAndDrink = ['pizza', 'coffee', 'beer', 'steak', 'mac and cheese'], inFavorites, heightGuesses = 3, foodGuesses = 6;
+var userName, howTall, bornInWA, hateRain, seahawksFan, seattleResidence, onlyChild, favoriteFoodAndDrink = ['pizza', 'coffee', 'beer', 'steak', 'mac and cheese'], inFavorites, heightGuesses = 3, foodGuesses = 6, correctGuesses = 0;
 
 userName = prompt('Hi, my name is Vince. What\'s yours?');
 console.log('userName', userName);
 
-alert('I have some questions for you, ' + userName + '.');
+alert('I have some questions for you, ' + userName + '. See how many you can get right!');
 
 howTall = prompt('First, how tall am I (in inches)?');
 console.log('howTall', howTall);
@@ -14,6 +14,8 @@ if (howTall < 76) {
   alert('I am not that short.');
 } else if (howTall === '76') {
   alert('Correct!');
+  correctGuesses++;
+  console.log('correctGuesses', correctGuesses);
 } else {
   alert('Whoa, I\'m not that tall!');
 }
@@ -25,6 +27,8 @@ if (howTall !== '76') {
       alert('I am not that short.');
     } else if (howTall === '76') {
       alert('Correct!');
+      correctGuesses++;
+      console.log('correctGuesses', correctGuesses);
       break;
     } else {
       alert('Whoa, I\'m not that tall!');
