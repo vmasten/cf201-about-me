@@ -50,8 +50,8 @@ function born(correct) {
   console.log('bornInWA', bornInWA);
   if (bornInWA === 'Y' || bornInWA === 'YES') {
     alert('That\'s right!');
-    correct++;
-    console.log('correctGuesses', correct);
+    correctGuesses++;
+    console.log('correctGuesses', correctGuesses);
   }
   else if (bornInWA === 'N' || bornInWA === 'NO') {
     alert('Turns out I was born and raised here.');
@@ -77,8 +77,8 @@ function rain(correct){
   }
   else if (hateRain === 'N' || hateRain === 'NO') {
     alert('That\'s right! I find the sound comforting.');
-    correct++;
-    console.log('correctGuesses', correct);
+    correctGuesses++;
+    console.log('correctGuesses', correctGuesses);
   }
   else {
     alert('Please enter y/n or yes/no');
@@ -90,57 +90,64 @@ rain(correctGuesses);
 
 
 
+function fan(correct){
+  seahawksFan = prompt('This one\'s probably too easy, but since I was born and raised here, am I a fan of the Seahawks?').toUpperCase();
+  console.log('seahawksFan', seahawksFan);
+  if (seahawksFan === 'Y' || seahawksFan === 'YES') {
+    alert('I told you that question was too easy!');
+    correctGuesses++;
+    console.log('correctGuesses', correctGuesses);
+  }
+  else if (seahawksFan === 'N' || seahawksFan === 'NO') {
+    alert('I know not every Seattleite is a Seahawks fan, but... try again!');
+  }
+  else {
+    alert('Please enter y/n or yes/no');
+  }
+  return correct;
+}
+fan(correctGuesses);
 
 
+function residence(correct){
+  seattleResidence = prompt('Maybe I was born in state, but have I always lived in Seattle?').toUpperCase();
+  console.log('seattleResidence', seattleResidence);
+  if (seattleResidence === 'Y' || seattleResidence === 'YES') {
+    alert('Nope! I\'ve lived in the city since 2012, but I grew up in the south sound.');
+  }
+  else if (seattleResidence === 'N' || seattleResidence === 'NO') {
+    alert('Right! I went to school in Sumner, WA. If you have no idea where that is, you\'re not alone!');
+    correctGuesses++;
+    console.log('correctGuesses', correctGuesses);
+  }
+  else {
+    alert('Please enter y/n or yes/no');
+  }
+  return correct;
+}
+residence(correctGuesses);
 
 
+function child(correct) {
+  onlyChild = prompt('Am I an only child?').toUpperCase();
+  console.log('onlyChild', onlyChild);
+  if (onlyChild === 'Y' || onlyChild === 'YES') {
+    alert('Not true! I have one older sister who also lives in Seattle.');
+  }
+  else if (onlyChild === 'N' || onlyChild === 'NO') {
+    alert('Yep! I have an older sister who also lives in town.');
+    correctGuesses++;
+    console.log('correctGuesses', correctGuesses);
+  }
+  else {
+    alert('Please enter y/n or yes/no');
+  }
+  return correct;
+}
 
-
-
+child(correctGuesses);
 
 /*
-
-hateRain = prompt('Since I\'ve lived here all my life, does that mean I hate the rain?').toUpperCase();
-console.log('hateRain', hateRain);
-if (hateRain === 'Y' || hateRain === 'YES') {
-  alert('Surprisingly, I don\'t mind the rain.');
-}
-else if (hateRain === 'N' || hateRain === 'NO') {
-  alert('That\'s right! I find the sound comforting.');
-  correctGuesses++;
-  console.log('correctGuesses', correctGuesses);
-}
-else {
-  alert('Please enter y/n or yes/no');
-}
-
-seahawksFan = prompt('This one\'s probably too easy, but since I was born and raised here, am I a fan of the Seahawks?').toUpperCase();
-console.log('seahawksFan', seahawksFan);
-if (seahawksFan === 'Y' || seahawksFan === 'YES') {
-  alert('I told you that question was too easy!');
-  correctGuesses++;
-  console.log('correctGuesses', correctGuesses);
-}
-else if (seahawksFan === 'N' || seahawksFan === 'NO') {
-  alert('I know not every Seattleite is a Seahawks fan, but... try again!');
-}
-else {
-  alert('Please enter y/n or yes/no');
-}
-
-seattleResidence = prompt('Maybe I was born in state, but have I always lived in Seattle?').toUpperCase();
-console.log('seattleResidence', seattleResidence);
-if (seattleResidence === 'Y' || seattleResidence === 'YES') {
-  alert('Nope! I\'ve lived in the city since 2012, but I grew up in the south sound.');
-}
-else if (seattleResidence === 'N' || seattleResidence === 'NO') {
-  alert('Right! I went to school in Sumner, WA. If you have no idea where that is, you\'re not alone!');
-  correctGuesses++;
-  console.log('correctGuesses', correctGuesses);
-}
-else {
-  alert('Please enter y/n or yes/no');
-}
 
 onlyChild = prompt('Am I an only child?').toUpperCase();
 console.log('onlyChild', onlyChild);
