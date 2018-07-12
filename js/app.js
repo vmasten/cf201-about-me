@@ -3,45 +3,46 @@
 var userName, howTall, bornInWA, hateRain, seahawksFan, seattleResidence, onlyChild, favoriteFoodAndDrink = ['pizza', 'coffee', 'beer', 'steak', 'mac and cheese'], inFavorites, heightGuesses = 3, foodGuesses = 6, correctGuesses = 0, foundFavorite = false;
 
 
-
-
-/*
 userName = prompt('Hi, my name is Vince. What\'s yours?');
 console.log('userName', userName);
 
 alert('I have some questions for you, ' + userName + '. See how many you can get right!');
 
-howTall = prompt('First, how tall am I (in inches)?');
-console.log('howTall', howTall);
 
+function height(correct) {
+  howTall = prompt('First, how tall am I (in inches)?');
+  console.log('howTall', howTall);
 
-if (howTall < 76) {
-  alert('I am not that short.');
-} else if (howTall === '76') {
-  alert('Correct!');
-  correctGuesses++;
-  console.log('correctGuesses', correctGuesses);
-} else {
-  alert('Whoa, I\'m not that tall!');
-}
+  if (howTall < 76) {
+    alert('I am not that short.');
+  } else if (howTall === '76') {
+    alert('Correct!');
+    correctGuesses++;
+    console.log('correctGuesses', correctGuesses);
+  } else {
+    alert('Whoa, I\'m not that tall!');
+  }
 
-if (howTall !== '76') {
-  for (var i = 0; i < heightGuesses; i++) {
-    howTall = prompt('Try again!');
-    if (howTall < 76) {
-      alert('I am not that short.');
-    } else if (howTall === '76') {
-      alert('Correct!');
-      correctGuesses++;
-      console.log('correctGuesses', correctGuesses);
-      break;
-    } else {
-      alert('Whoa, I\'m not that tall!');
+  if (howTall !== '76') {
+    for (var i = 0; i < heightGuesses; i++) {
+      howTall = prompt('Try again!');
+      if (howTall < 76) {
+        alert('I am not that short.');
+      } else if (howTall === '76') {
+        alert('Correct!');
+        correctGuesses++;
+        console.log('correctGuesses', correctGuesses);
+        break;
+      } else {
+        alert('Whoa, I\'m not that tall!');
+      }
     }
   }
+  return correct;
 }
 
-*/
+height(correctGuesses);
+
 
 alert('The following questions require a response of y/n or yes/no.');
 
@@ -147,76 +148,66 @@ function child(correct) {
 
 child(correctGuesses);
 
-/*
 
-onlyChild = prompt('Am I an only child?').toUpperCase();
-console.log('onlyChild', onlyChild);
-if (onlyChild === 'Y' || onlyChild === 'YES') {
-  alert('Not true! I have one older sister who also lives in Seattle.');
-}
-else if (onlyChild === 'N' || onlyChild === 'NO') {
-  alert('Yep! I have an older sister who also lives in town.');
-  correctGuesses++;
-  console.log('correctGuesses', correctGuesses);
-}
-else {
-  alert('Please enter y/n or yes/no');
-}
 
-for (var j = 0; j < foodGuesses; j++) {
-  inFavorites = prompt('What\'s one of my favorite foods?').toLowerCase();
-  console.log('inFavorites', inFavorites);
-  for (var k = 0; k < favoriteFoodAndDrink.length; k++) {
-    if (inFavorites === favoriteFoodAndDrink[k]) {
-      if (inFavorites === 'pizza') {
-        alert('Yes! If the question is pizza, the answer is yes.');
-        foundFavorite = true;
-        correctGuesses++;
-        console.log('correctGuesses', correctGuesses);
-        break;
-      }
-      else if (inFavorites === 'coffee') {
-        alert('YES. Black coffee is a way of life.');
-        foundFavorite = true;
-        correctGuesses++;
-        console.log('correctGuesses', correctGuesses);
-        break;
-      }
-      else if (inFavorites === 'beer') {
-        alert('Yep. Some of my friends refer to me as a beer snob, but I prefer the term enthusiast.');
-        foundFavorite = true;
-        correctGuesses++;
-        console.log('correctGuesses', correctGuesses);
-        break;
-      }
-      else if (inFavorites === 'steak') {
-        alert('Absolutely. Medium rare, please!');
-        foundFavorite = true;
-        correctGuesses++;
-        console.log('correctGuesses', correctGuesses);
-        break;
-      }
-      else if (inFavorites === 'mac and cheese') {
-        alert('Yeah, especially if it\'s spicy!');
-        foundFavorite = true;
-        correctGuesses++;
-        console.log('correctGuesses', correctGuesses);
-        break;
+function food(correct){
+  for (var j = 0; j < foodGuesses; j++) {
+    inFavorites = prompt('What\'s one of my favorite foods?').toLowerCase();
+    console.log('inFavorites', inFavorites);
+    for (var k = 0; k < favoriteFoodAndDrink.length; k++) {
+      if (inFavorites === favoriteFoodAndDrink[k]) {
+        if (inFavorites === 'pizza') {
+          alert('Yes! If the question is pizza, the answer is yes.');
+          foundFavorite = true;
+          correctGuesses++;
+          console.log('correctGuesses', correctGuesses);
+          break;
+        }
+        else if (inFavorites === 'coffee') {
+          alert('YES. Black coffee is a way of life.');
+          foundFavorite = true;
+          correctGuesses++;
+          console.log('correctGuesses', correctGuesses);
+          break;
+        }
+        else if (inFavorites === 'beer') {
+          alert('Yep. Some of my friends refer to me as a beer snob, but I prefer the term enthusiast.');
+          foundFavorite = true;
+          correctGuesses++;
+          console.log('correctGuesses', correctGuesses);
+          break;
+        }
+        else if (inFavorites === 'steak') {
+          alert('Absolutely. Medium rare, please!');
+          foundFavorite = true;
+          correctGuesses++;
+          console.log('correctGuesses', correctGuesses);
+          break;
+        }
+        else if (inFavorites === 'mac and cheese') {
+          alert('Yeah, especially if it\'s spicy!');
+          foundFavorite = true;
+          correctGuesses++;
+          console.log('correctGuesses', correctGuesses);
+          break;
+        }
       }
     }
+    if (foundFavorite === true) {
+      alert('Here are all of the correct answers: ' + favoriteFoodAndDrink[0] + ', ' + favoriteFoodAndDrink[1] + ', ' + favoriteFoodAndDrink[2] + ', ' + favoriteFoodAndDrink[3] + ', ' + favoriteFoodAndDrink[4]);
+      break;
+    }
+    else {
+      alert('Try again!');
+    }
   }
-  if (foundFavorite === true) {
-    alert('Here are all of the correct answers: ' + favoriteFoodAndDrink[0] + ', ' + favoriteFoodAndDrink[1] + ', ' + favoriteFoodAndDrink[2] + ', ' + favoriteFoodAndDrink[3] + ', ' + favoriteFoodAndDrink[4]);
-    break;
+  if (foundFavorite === false) {
+    alert('Sorry, you are out of guesses. Here are all of the correct answers: ' + favoriteFoodAndDrink[0] + ', ' + favoriteFoodAndDrink[1] + ', ' + favoriteFoodAndDrink[2] + ', ' + favoriteFoodAndDrink[3] + ', ' + favoriteFoodAndDrink[4]);
   }
-  else {
-    alert('Try again!');
-  }
+  return correct;
 }
-if (foundFavorite === false) {
-  alert('Sorry, you are out of guesses. Here are all of the correct answers: ' + favoriteFoodAndDrink[0] + ', ' + favoriteFoodAndDrink[1] + ', ' + favoriteFoodAndDrink[2] + ', ' + favoriteFoodAndDrink[3] + ', ' + favoriteFoodAndDrink[4]);
-}
+
+food(correctGuesses);
+
 
 alert('Thanks for playing my guessing game, ' + userName + '! You got ' + correctGuesses + ' questions right!');
-
-*/
