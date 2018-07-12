@@ -47,7 +47,7 @@ alert('The following questions require a response of y/n or yes/no.');
 
 function born(correct) {
   bornInWA = prompt('Was I born in Washington State?').toUpperCase();
-  console.log('bornInWA', correct);
+  console.log('bornInWA', bornInWA);
   if (bornInWA === 'Y' || bornInWA === 'YES') {
     alert('That\'s right!');
     correct++;
@@ -68,11 +68,25 @@ born(correctGuesses);
 
 
 
+function rain(correct){
 
+  hateRain = prompt('Since I\'ve lived here all my life, does that mean I hate the rain?').toUpperCase();
+  console.log('hateRain', hateRain);
+  if (hateRain === 'Y' || hateRain === 'YES') {
+    alert('Surprisingly, I don\'t mind the rain.');
+  }
+  else if (hateRain === 'N' || hateRain === 'NO') {
+    alert('That\'s right! I find the sound comforting.');
+    correct++;
+    console.log('correctGuesses', correct);
+  }
+  else {
+    alert('Please enter y/n or yes/no');
+  }
+  return correct;
+}
 
-
-
-
+rain(correctGuesses);
 
 
 
