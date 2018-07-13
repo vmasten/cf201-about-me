@@ -2,12 +2,16 @@
 
 var userName, howTall, bornInWA, hateRain, seahawksFan, seattleResidence, onlyChild, favoriteFoodAndDrink = ['pizza', 'coffee', 'beer', 'steak', 'mac and cheese'], inFavorites, heightGuesses = 3, foodGuesses = 6, correctGuesses = 0, foundFavorite = false;
 
+function intro(correct) {
+  userName = prompt('Hi, my name is Vince. What\'s yours?');
+  console.log('userName', userName);
 
-userName = prompt('Hi, my name is Vince. What\'s yours?');
-console.log('userName', userName);
+  alert('I have some questions for you, ' + userName + '. See how many you can get right!');
 
-alert('I have some questions for you, ' + userName + '. See how many you can get right!');
+  return correct;
+}
 
+intro(correctGuesses);
 
 function height(correct) {
   howTall = prompt('First, how tall am I (in inches)?');
