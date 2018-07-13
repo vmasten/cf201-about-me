@@ -47,10 +47,8 @@ function height(correct) {
 
 height(correctGuesses);
 
-
-alert('The following questions require a response of y/n or yes/no.');
-
 function born(correct) {
+  alert('The following questions require a response of y/n or yes/no.');
   bornInWA = prompt('Was I born in Washington State?').toUpperCase();
   console.log('bornInWA', bornInWA);
   if (bornInWA === 'Y' || bornInWA === 'YES') {
@@ -213,5 +211,10 @@ function food(correct){
 
 food(correctGuesses);
 
+function goodbye(correct) {
+  alert('Thanks for playing my guessing game, ' + userName + '! You got ' + correctGuesses + ' questions right!');
 
-alert('Thanks for playing my guessing game, ' + userName + '! You got ' + correctGuesses + ' questions right!');
+  return correct;
+}
+
+goodbye(correctGuesses);
