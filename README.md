@@ -1,2 +1,2 @@
-# Code Fellows 201 Lab 4
-This page was last modifed by driver Joyce Liao with an assist from navigator Vince Masten
+# Code Fellows 201 Labs 1-5
+An About Me page asking questions via JavaScript prompts and alerts, followed by more information about the questions asked. Made to demonstrate basic proficiency with JavaScript, HTML and CSS.

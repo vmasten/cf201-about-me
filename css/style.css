@@ -1,32 +1,64 @@
+h1 {
+  text-align: center;
+  background-color: #2C2C2C;
+  color: #FFFFFF;
+  font-family: Futura, serif;
+  font-stretch: expanded;
+  font-size: 30px;
+  margin-bottom: 7px;
+  filter: drop-shadow(1px 2px 2px #2c2c2c);
+}
 
 body {
   width: 960px;
-  margin: 0 auto}
-
-h1 {
   margin: 0 auto;
-  text-align: center;
-  background-color: rgb(36, 36, 36);
-  color: white;
-  font-family: Futura, serif;
-  font-size: 30px;
+  line-height: 1.5;
+  font-family: "Roboto", sans-serif;
 }
-  
+
 h2 {
   font-size: 18px;
-  font-family: Arial, Helvetica, sans-serif, sans-serif;
-  padding-bottom: 0.5em;
 }
 
-p, li {
-  font-family: Arial, Helvetica, sans-serif, sans-serif;
+.facts {
   font-size: 14px;
- padding-bottom: 0.5em;
+  padding-bottom: 1em;
+ margin-left: 10px;
+}
+
+p {
+  font-size: 14px;
+  padding-bottom: 1em;
 }
 
 ol {
-  margin-left: 20px;
+  list-style: inside;
+  text-indent: 10px;
   list-style-type: decimal;
 }
 
-body {background-color: #f0f8ff};
+ul {
+  list-style: none;
+}
+
+/* Slightly hacky colored bullet implementation borrowed from: https://stackoverflow.com/questions/1470214/change-bullets-color-of-an-html-list-without-using-span */
+ul li:before {
+  content: '\2022';
+  display: block;
+  position: relative;
+  max-width: 0;
+  max-height: 0;
+  left: -10px;
+  top: 0;
+  color: #C75959;
+  font-size: 16px;
+}
+
+span.introblock {
+  display: inline-block;
+  background-color: #C75959;
+  color: #FFFFFF;
+  padding: 2px;
+  filter: drop-shadow(1px 2px 2px #2c2c2c);
+  margin-bottom: 5px;
+}
