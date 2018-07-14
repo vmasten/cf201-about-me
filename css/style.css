@@ -1,13 +1,14 @@
 
 body {
   width: 960px;
-  margin: 0 auto
+  margin: 0 auto;
+  line-height: 1.5;
 }
 
 h1 {
   text-align: center;
-  background-color: rgb(36, 36, 36);
-  color: white;
+  background-color: #2C2C2C;
+  color: #FFFFFF;
   font-family: Futura, serif;
   font-stretch: expanded;
   font-size: 30px;
@@ -15,17 +16,41 @@ h1 {
   
 h2 {
   font-size: 18px;
-  font-family: Arial, Helvetica, sans-serif, sans-serif;
-  padding-bottom: 0.5em;
+  font-family: Droid, sans-serif;
 }
 
-p, li {
+.facts {
+  font-family: Droid, sans-serif;
+  font-size: 14px;
+  padding-bottom: 1em;
+ margin-left: 10px;
+}
+
+p {
   font-family: Arial, Helvetica, sans-serif, sans-serif;
   font-size: 14px;
- padding-bottom: 0.5em;
+  padding-bottom: 1em;
 }
+
+
 
 ol {
   margin-left: 20px;
   list-style-type: decimal;
+  font-family: Droid, sans-serif;
+}
+
+ul {
+  list-style: none
+}
+ul li:before {
+  content: '\2022';
+  display: block;
+  position: relative;
+  max-width: 0;
+  max-height: 0;
+  left: -10px;
+  top: 0;
+  color: #C75959;
+  font-size: 20px;
 }
