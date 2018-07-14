@@ -5,13 +5,15 @@ h1 {
   font-family: Futura, serif;
   font-stretch: expanded;
   font-size: 30px;
+  margin-bottom: 7px;
+  filter: drop-shadow(1px 2px 2px #2c2c2c);
 }
 
 body {
   width: 960px;
   margin: 0 auto;
   line-height: 1.5;
-  font-family: Droid, sans-serif;
+  font-family: "Roboto", sans-serif;
 }
 
 h2 {
@@ -54,6 +56,10 @@ ul li:before {
 }
 
 span.introblock {
+  display: inline-block;
   background-color: #C75959;
   color: #FFFFFF;
+  padding: 2px;
+  filter: drop-shadow(1px 2px 2px #2c2c2c);
+  margin-bottom: 5px;
 }
