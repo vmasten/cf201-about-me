@@ -1,14 +1,15 @@
 
 body {
   width: 960px;
-  margin: 0 auto}
+  margin: 0 auto
+}
 
 h1 {
-  margin: 0 auto;
   text-align: center;
   background-color: rgb(36, 36, 36);
   color: white;
   font-family: Futura, serif;
+  font-stretch: expanded;
   font-size: 30px;
 }
   
@@ -28,5 +29,3 @@ ol {
   margin-left: 20px;
   list-style-type: decimal;
 }
-
-body {background-color: #f0f8ff};
