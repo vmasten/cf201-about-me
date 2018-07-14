@@ -42,7 +42,6 @@ ul {
 }
 
 /* Slightly hacky colored bullet implementation borrowed from: https://stackoverflow.com/questions/1470214/change-bullets-color-of-an-html-list-without-using-span */
-
 ul li:before {
   content: '\2022';
   display: block;
